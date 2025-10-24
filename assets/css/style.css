@@ -1,0 +1,75 @@
+
+body {
+  margin: 0;
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+  background: #fff;
+  color: #222;
+}
+header {
+  background: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+#toggle-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -220px;
+  width: 200px;
+  height: 100%;
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+  transition: left 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+}
+.sidebar a {
+  padding: 1rem;
+  text-decoration: none;
+  color: #333;
+}
+.sidebar a.active, .sidebar a:hover {
+  background: #f37021;
+  color: #fff;
+}
+.sidebar.open { left: 0; }
+.content { padding: 2rem; }
+.hero {
+  background: linear-gradient(135deg,#f37021,#0078d7);
+  color: white;
+  padding: 3rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap: 1rem;
+}
+.product-card {
+  background: #fafafa;
+  border-radius: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  text-align: center;
+  padding: 1rem;
+}
+.product-card img { width: 100%; border-radius: 1rem; }
+button {
+  background: #0078d7;
+  color: white;
+  border: none;
+  padding: .5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+button:hover { background: #005bb5; }
